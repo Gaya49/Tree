@@ -1,6 +1,5 @@
 
 
-
 public class Branch extends Tree {
     private int elem;   //radice
     private Tree left;  //nodi a sinistra: piu' piccoli della radice
