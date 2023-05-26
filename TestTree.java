@@ -1,26 +1,12 @@
 
-//TestTree.java. Per sperimentare la classe Tree degli alberi di
-//ricerca
-/* Per stampare un albero t, trascrivo t nella stringa t.toString(), con toString() ridefinito. Il comando e': System.out.println(t), abbreviazione di System.out.println(t.toString()) */
 
 import java.util.*;
-//Inserisco la libreria di utilities Java, per avere la classe Random
+
 
 public class TestTree {
     public static void main(String[] args) {
-        // iniziamo con un errore: perché dobbiamo sempre riassegnare il valore dell'albero
-        // quando insriamo o rimuoviamo
-        Tree vuoto = new Leaf();
-        vuoto.insert(10);
-        // vuoto sarà ancora vuoto perché new Leaf torna un oggetto di tipo branch che deve essere sostituito
-        // nel puntatore all'albero
-        System.out.println("l'abero NON è stato modificato    \n" + vuoto);
-        System.out.println();
-
-        // quindi è corretto fare
+        
         vuoto = vuoto.insert(10);
-        // vuoto sarà ancora vuoto perché new Leaf torna un oggetto di tipo branch che deve essere sostituito
-        // nel puntatore all'albero
         System.out.println("l'abero è stato modificato    \n" + vuoto);
         System.out.println();
 
@@ -29,14 +15,12 @@ public class TestTree {
         //dall’orologio di sistema.
 
         // Creo un albero t con n numeri interi casuali tra 0 e (n-1)
-        // (gli interi estratti piu' volte compaiono una volta sola, altri
-        // interi tra 0 e (n-1) non compaiono affatto)
         int n = 8;
         Tree t = new Leaf(); //L'albero t nasce vuoto
         for (int i = 0; i < n; i++)
-            t = t.insert(r.nextInt(n)); //Accresco t un elemento alla volta
+            t = t.insert(r.nextInt(n)); 
 
-        //Provo il metodo di stampa e il calcolo del massimo
+       
         System.out.println("Stampa albero casuale t di al piu' " + n + " elementi \n\n" + t + "\n\n t.max() = " + t.max());
 
         //Creo un albero u inserendo sempre elementi piu' grandi
@@ -61,6 +45,6 @@ public class TestTree {
         System.out.println("\n w senza il nodo 3\n\n" + w);
     }
 }
-// end class Test Tree
+
 
 
