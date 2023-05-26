@@ -5,7 +5,6 @@
 // LEAF: contiene il solo albero vuoto "leaf"
 // BRANCH: contiene tutti gli alberi non vuoti
 
-
 public abstract class Tree {
     //Test se l'albero e' vuoto
     public abstract boolean empty();
